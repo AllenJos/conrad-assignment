@@ -21,6 +21,9 @@ import static de.conrad.codeworkshop.factory.services.order.api.OrderStatus.ACCE
 
 /**
  * @author Andreas Hartmann
+ *
+ * <p>Java class for processing orders
+ *
  */
 @org.springframework.stereotype.Service("orderService")
 public class Service {
@@ -45,6 +48,13 @@ public class Service {
     /**
      * Validates the input order. If it is valid, it is enqueued in the factory via the factoryController. Either way an
      * appropriate order confirmation is returned.
+     * @param order
+     *        allowed object is:
+     *        {@link Order}
+     *
+     * @return
+     *        Objects of the following type(s) are allowed:
+     *        {@link OrderConfirmation}
      */
 
     public OrderConfirmation createOrder(final Order order) {
@@ -65,6 +75,12 @@ public class Service {
 
         return orderConfirmation;
     }
+
+    /**
+     * <p>Method for removing orders from manufacturingQueue in {@link de.conrad.codeworkshop.factory.services.factory.Service},
+     * <p>Sets the {@link OrderStatus} to COMPLETED and
+     * <p>Calls the notifyCustomer method in {@link de.conrad.codeworkshop.factory.services.notification.Service}</p>
+     */
 
     public void completeOrder() {
 

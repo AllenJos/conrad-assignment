@@ -2,6 +2,9 @@ package de.conrad.codeworkshop.factory.exception;
 
 import java.time.LocalDateTime;
 
+/**
+ * Java Class used by {@link de.conrad.codeworkshop.factory.config.HandlerConfig} for custom Exception Handling
+ */
 public class ExceptionDetails {
 
     private LocalDateTime timestamp;

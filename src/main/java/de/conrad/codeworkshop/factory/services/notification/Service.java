@@ -11,6 +11,12 @@ import org.springframework.scheduling.annotation.Async;
 @org.springframework.stereotype.Service("notificationService")
 public class Service {
 
+    /**
+     * Method for sending notification to the customer.
+     * @param order
+     *        allowed objects are:
+     *        {@link Order}
+     */
     public void notifyCustomer(final Order order) {
         // Dummy function that would notify the customer that manufacturing is completed.
 

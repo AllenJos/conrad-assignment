@@ -7,6 +7,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * Custom Annotation for Validating quantity attribute in {@link de.conrad.codeworkshop.factory.services.order.api.Position}
+ */
 @Constraint(validatedBy = QuantityValidator.class)
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -18,7 +21,5 @@ public @interface QuantityConstraint {
             " -or exactly 42.42.";
 
     Class<?>[] groups() default {};
-
     Class<? extends Payload>[] payload() default {};
-
 }

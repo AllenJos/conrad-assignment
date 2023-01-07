@@ -4,6 +4,9 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.math.BigDecimal;
 
+/**
+ * Custom Validator to be used in {@link QuantityConstraint}
+ */
 public class QuantityValidator implements ConstraintValidator<QuantityConstraint, BigDecimal> {
 
     @Override
