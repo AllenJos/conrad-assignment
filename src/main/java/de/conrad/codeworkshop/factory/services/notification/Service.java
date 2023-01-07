@@ -1,9 +1,6 @@
 package de.conrad.codeworkshop.factory.services.notification;
 
 import de.conrad.codeworkshop.factory.services.order.api.Order;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Async;
 
 /**
  * @author Andreas Hartmann

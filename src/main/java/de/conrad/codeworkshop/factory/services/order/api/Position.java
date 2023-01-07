@@ -1,11 +1,8 @@
 package de.conrad.codeworkshop.factory.services.order.api;
 
 import de.conrad.codeworkshop.factory.services.order.validator.QuantityConstraint;
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 
 /**
