@@ -16,17 +16,17 @@ import javax.validation.Valid;
 @RequestMapping(value = "/order")
 public class Controller {
 
-    private final Service factoryService;
+    private final Service orderService;
 
     @Autowired
     public Controller(final Service service) {
-        this.factoryService = service;
+        this.orderService = service;
     }
 
     @ApiOperation("Creates New Order.")
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE,
                                     produces = MediaType.APPLICATION_JSON_VALUE)
     public OrderConfirmation createOrder(@Valid @RequestBody final Order order) {
-        return factoryService.createOrder(order);
+        return orderService.createOrder(order);
     }
 }
