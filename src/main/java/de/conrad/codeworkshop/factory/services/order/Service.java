@@ -96,6 +96,6 @@ public class Service {
                                                }
                                            }
                                    }
-        ).join();
+        );
     }
 }
